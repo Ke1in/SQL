@@ -7,7 +7,7 @@ try {
         'user', 
         'pass' 
     ); 
-    echo "Tietokantayhteys toimii!"; 
+    echo "Tietokantayhteys toimii 1"; 
 } catch (PDOException $e) { 
     echo "Virhe: " . $e->getMessage(); 
 } 
