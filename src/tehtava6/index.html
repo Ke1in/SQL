@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Lamppu</title>
+        <body>
+            <!--&#128161;&#128280;-->
+            <h2>Lampun tila:</h2>
+            <div id="lampuntila"></div>
+            <p><button onclick="kytkin()">Kytkin</button></p>
+        </body>
+
+        <script>
+            class Lamppu{
+                constructor(){
+                    this.tila = "sammunut";
+                }
+
+                sytyta(){
+                    this.tila = "päällä";
+                }
+
+                sammuta(){
+                    this.tila = "sammunut";
+                }
+            }
+
+            const lamppu = new Lamppu();
+
+            function kytkin(){
+                if (lamppu.tila === "sammunut"){
+                    lamppu.sytyta();
+                } else {
+                    lamppu.sammuta();
+                }
+                document.getElementById("lampuntila").innerHTML = lamppu.tila === "päällä" ? "&#128161;" : "&#128280;";
+            }
+        </script>
+    </head>
+</html>
