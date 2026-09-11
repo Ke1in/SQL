@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Book</title>
+    </head>
+
+    <body>
+        <p id="book"></p>
+    </body>
+
+    <script>
+        class Book {
+            constructor(name, author, pages) {
+                this.name = name;
+                this.author = author;
+                this.pages = pages;
+            }
+        }
+
+        let book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 180);
+
+        document.getElementById("book").innerHTML = `Book name: ${book1.name}<br/>Book author: ${book1.author}<br/>Book pages: ${book1.pages}`;
+    </script>
+</html>
