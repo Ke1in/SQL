@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        
+        <p id="car"></p>
     </body>
 
     <script>
@@ -21,5 +21,7 @@
 
         car1.brand = "Toyota";
         car1.model = "Corolla";
+
+        document.getElementById("car").innerHTML = `Brand: ${car1.brand}<br/>Model: ${car1.model}`
     </script>
 </html>
