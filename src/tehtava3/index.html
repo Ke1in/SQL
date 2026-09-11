@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Student</title>
+    </head>
+
+    <body>
+        <p id="student"></p>
+    </body>
+
+    <script>
+        class Student {
+            constructor(name, course) {
+                this.name = name;
+                this.course = course;
+            }
+
+            Introduction() {
+                document.getElementById("student").innerHTML += `Student name: ${this.name}<br/>Student course: ${this.course}<br/><br/>`;
+            }
+        }
+
+        let student1 = new Student("Taavi", "programming");
+        let student2 = new Student("Paavo", "English");
+
+        student1.Introduction();
+        student2.Introduction();
+    </script>
+</html>

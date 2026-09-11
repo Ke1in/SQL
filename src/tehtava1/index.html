@@ -12,15 +12,12 @@
     <script>
         class Car {
             constructor(brand, model) {
-                this.brand = "";
-                this.model = "";
+                this.brand = brand;
+                this.model = model;
             }
         }
 
-        let car1 = new Car();
-
-        car1.brand = "Toyota";
-        car1.model = "Corolla";
+        let car1 = new Car("Toyota", "Corolla");
 
         document.getElementById("car").innerHTML = `Brand: ${car1.brand}<br/>Model: ${car1.model}`
     </script>
