@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Autot</title>
+    </head>
+    <body>
+        <h1>Autot</h1>
+
+        <div id="autot"></div>
+    </body>
+    <script>
+        fetch("api.php")
+            .then(response => response.json())
+            .then(autot => {
+
+                let teksti = "";
+
+                autot.forEach(auto => {
+                    teksti += `
+                    <p>
+                        ${auto.merkki} ${auto.malli}
+                        (${auto.vuosi})
+                    </p>
+                    `;
+                });
+
+                document.getElementById("autot").innerHTML = teksti;
+            });
+
+    </script>
+</html>
