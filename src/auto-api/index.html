@@ -12,15 +12,15 @@
     <script>
         fetch("api.php")
             .then(response => response.json())
-            .then(autot => {
+            .then(cars => {
 
                 let teksti = "";
 
-                autot.forEach(auto => {
+                cars.forEach(auto => {
                     teksti += `
                     <p>
-                        ${auto.merkki} ${auto.malli}
-                        (${auto.vuosi})
+                        ${auto.make} ${auto.model}
+                        (${auto.year})
                     </p>
                     `;
                 });
