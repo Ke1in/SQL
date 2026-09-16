@@ -29,18 +29,14 @@ function loadProducts() {
                 );
             });
 
-            showProducts();
+            let productShow = "";
+
+            for (let i = 0; i < productList.length; i++) {
+                productShow += productList[i].printDetails();
+            }
+
+            document.getElementById("productList").innerHTML = productShow;
         });
-}
-
-function showProducts() {
-    let products = "";
-
-    for (let i = 0; i < productList.length; i++) {
-        products += productList[i].printDetails();
-    }
-
-    document.getElementById("productList").innerHTML = products;
 }
 
 function addProduct() {
